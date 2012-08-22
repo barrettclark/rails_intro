@@ -1,0 +1,21 @@
+<h1>Listing respondents</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @respondents.each do |respondent| %>
+  <tr>
+    <td><%= link_to 'Show', respondent %></td>
+    <td><%= link_to 'Edit', edit_respondent_path(respondent) %></td>
+    <td><%= link_to 'Destroy', respondent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Respondent', new_respondent_path %>
