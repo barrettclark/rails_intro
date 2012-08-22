@@ -1,4 +1,12 @@
 RailsIntro::Application.routes.draw do
+  resources :respondents
+
+  resources :responses
+
+  resources :answers
+
+  resources :questions
+
   resources :surveys
 
   # The priority is based upon order of creation:

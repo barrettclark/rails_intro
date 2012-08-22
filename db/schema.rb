@@ -11,7 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120822004135) do
+ActiveRecord::Schema.define(:version => 20120822041123) do
+
+  create_table "answers", :force => true do |t|
+    t.integer  "question_id"
+    t.string   "text"
+    t.integer  "sequence"
+    t.string   "value"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "questions", :force => true do |t|
+    t.text     "text"
+    t.string   "type"
+    t.integer  "survey_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "respondents", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "responses", :force => true do |t|
+    t.integer  "answer_id"
+    t.integer  "respondent_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "surveys", :force => true do |t|
     t.string   "name"
