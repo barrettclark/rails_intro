@@ -1,0 +1,106 @@
+Ruby Outline
+
+
+Scripting
+Dynamically Types
+Focus is on productivity of developers
+Pretty syntax (Syntax Sugar)
+Everything is an Object
+IRB = 
+Strings
+  puts "Hello World"
+  local variable name
+  puts "Hello #{name}"
+
+Symbols
+  "hi".object_id vs :hi.object_id
+  
+Variable scope
+  foo
+  *$foo
+  @foo
+  *@@foo
+  FOO_USERS
+  *not focused on in this class
+Flow control statements  
+  if/elsif/else/end -- unless
+  !, !!, ||, &&
+  cond ? true : false
+  while
+  false (nil && false)
+  each -- more to come
+Enumerable
+  Arrays
+    push/pop/[]/[]=
+    each
+  Hashes (1.8.7 vs 1.9.3)
+    {key: "value"} / {:key => "value"}
+    sort <=>
+  Ranges
+=================== individual exercise ================ 
+Print your name ten times
+Print the string “This is sentence number 1,” where the number 1 changes from 1 to 10
+Print each letter of your name on a line (hint []= String.split(//))
+Create a hash with your first and last name
+  
+class
+  new
+  superclass
+  private/public/protected
+  
+def method(arg, arg=default, *args, &block)
+
+blocks
+  map/collect, select/find
+  yield
+  
+modules
+  no new or superclass
+
+open class
+ open String up and add a randomize method (str.split(//).shuffle.join)
+reflection
+  inspect
+  methods
+  class
+
+Class exercise to write attr_accessor
+Class exercise to write 10.times
+RVM
+=================== RAILS ================ 
+
+Model our app
+  - surveys
+  - questions
+  - answers
+  - responses
+  - respondents
+  - (interviews)
+  
+gem install rails  
+Rails new Survey
+Rails Status Page
+git init; add; commit -m
+
+rails scaffold survey name
+rake db:migrate
+rails s
+yeah!! party time
+=======  Break  ========
+So what happened
+routes
+MVC
+
+
+rails scaffold on all models
+rails g controller interviews
+
+
+Relations (nutty proff)
+  has_one, has_many, belongs_to
+
+
+
+
+
+authenticate for admin sections
