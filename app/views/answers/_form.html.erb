@@ -10,11 +10,7 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :question_id %><br />
-    <%= f.number_field :question_id %>
-  </div>
+  <%= f.hidden_field :question_id %>
   <div class="field">
     <%= f.label :text %><br />
     <%= f.text_field :text %>

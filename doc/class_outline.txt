@@ -104,13 +104,30 @@ MVC
 
 rails scaffold on all models
 rails g controller interviews
+add interview routes
+create survey
+create question
+  - Type throws an error because it is reserved
 
-
+add create_questions link  
+questions_controller
+  + before_filter
+  + session
+debugger
+  
 Relations (nutty proff)
   has_one, has_many, belongs_to
 
+remove session_field from question form
+rails c
+rename type => question_type / kind
+protected attribute type => kind
 
+link to add answers
+answers with question_id as hidden field
 
+? re-work flow of links for adding answers
+? tabs for surveys / questions / answers
 
 
 authenticate for admin sections

@@ -1,4 +1,5 @@
 class AnswersController < ApplicationController
+  before_filter :set_current_question
   # GET /answers
   # GET /answers.json
   def index
@@ -25,6 +26,7 @@ class AnswersController < ApplicationController
   # GET /answers/new.json
   def new
     @answer = Answer.new
+    @answer.question = current_question
 
     respond_to do |format|
       format.html # new.html.erb
@@ -80,4 +82,13 @@ class AnswersController < ApplicationController
       format.json { head :no_content }
     end
   end
+private
+  def set_current_question
+    @current_question ||= Question.find(params[:question]) if params[:question]
+  end
+  
+  def current_question
+    @current_question
+  end
+  
 end

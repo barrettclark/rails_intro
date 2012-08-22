@@ -6,11 +6,13 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @surveys.each do |survey| %>
   <tr>
     <td><%= survey.name %></td>
+    <td><%= link_to 'Add Questions', new_question_path(:survey => survey) %></td>
     <td><%= link_to 'Show', survey %></td>
     <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
     <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
