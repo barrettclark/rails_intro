@@ -125,8 +125,17 @@ protected attribute type => kind
 
 link to add answers
 answers with question_id as hidden field
+re-work flow of links for adding answers
+add TYPES to Question
+validates_uniqueness_of on Answer 
+  answers/form
+  
+Interviews
+  application_controller :current_survey, :current_respondent
+    helper 
 
-? re-work flow of links for adding answers
+    view start.html.erb
+  
 ? tabs for surveys / questions / answers
 
 

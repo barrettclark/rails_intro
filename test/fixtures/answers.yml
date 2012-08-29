@@ -4,10 +4,10 @@ one:
   question_id: 1
   text: MyString
   sequence: 1
-  value: MyString
+  value: 1
 
 two:
   question_id: 1
   text: MyString
-  sequence: 1
-  value: MyString
+  sequence: 2
+  value: 2

@@ -9,10 +9,11 @@ RailsIntro::Application.routes.draw do
 
   resources :surveys
   
-  match 'start' => 'interview#index'
+  match 'start' => 'interview#start'
   # id in this route will represent the survey_id
   # this route can be invoked with next_question_path(:id => survey.id)
-  match 'interview/:id/next' => 'interview#next', :as => :next_question
+  match 'next' => 'interview#next', :as => :next_question
+  match 'done' => 'interview#done'
 
 
   # The priority is based upon order of creation:
