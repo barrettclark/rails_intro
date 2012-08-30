@@ -2,10 +2,10 @@
 
 one:
   text: MyText
-  type: 
+  kind: 
   survey_id: 1
 
 two:
   text: MyText
-  type: 
+  kind: 
   survey_id: 1
