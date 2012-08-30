@@ -3,6 +3,8 @@ class Survey < ActiveRecord::Base
   has_many :questions
   
   def self.next(survey, respondent)
-    # responses left join with survey / repondent where responce is null for question
+    respondent = Response.questions_answered(respondent)
+    questions = Question.ids_for_survey(survey)
+    (questions - responses).first
   end
 end

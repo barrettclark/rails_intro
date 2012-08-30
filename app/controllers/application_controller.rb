@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  helper_method :current_survey, :current_respondant
+  helper_method :current_survey, :current_respondent
   
   
   def current_survey

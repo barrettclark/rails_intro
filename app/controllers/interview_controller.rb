@@ -1,21 +1,24 @@
 class InterviewController < ApplicationController
   before_filter :set_survey, :set_respondent
+
   def start
     redirect_to :action => :next
   end
   
   def next
-    # render :text => "yes"
     @question = Survey.next(@survey, @respondent)
-    # if done redirect_to :action => :done 
+    if @question.nil?
+      redirect_to :action => :done
+    end
   end
 
   def done
-    # reset survey 
+    render :text => "Thank you"
+    # reset survey
     # reset respondent
   end
 
-private  
+private
   def set_survey
     @survey ||= current_survey
   end
