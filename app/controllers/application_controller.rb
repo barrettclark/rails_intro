@@ -2,8 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   helper_method :current_survey, :current_respondent
-  
-  
+
   def current_survey
     session[:current_survey] ||= pick_survey
   end
@@ -12,13 +11,12 @@ class ApplicationController < ActionController::Base
     session[:current_respondent] ||= new_respondent
   end
   
-private  
+private
   def pick_survey
-    Survey.limit(1).order("random()")
+    Survey.limit(1).order("random()").first
   end
   
   def new_respondent
-    Respondent.new
+    Respondent.create!
   end
-  
 end

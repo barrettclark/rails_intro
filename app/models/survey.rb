@@ -3,7 +3,7 @@ class Survey < ActiveRecord::Base
   has_many :questions
   
   def self.next(survey, respondent)
-    respondent = Response.questions_answered(respondent)
+    responses = Response.questions_answered(respondent)
     questions = Question.ids_for_survey(survey)
     (questions - responses).first
   end
