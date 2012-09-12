@@ -18,7 +18,7 @@ class ResponsesControllerTest < ActionController::TestCase
 
   test "should create response" do
     assert_difference('Response.count') do
-      post :create, response: { answer_id: @myresponse.answer_id, respondent_id: @myresponse.respondent_id }
+      post :create, response: { answer_id: @myresponse.answer_id, :value => @myresponse.value, respondent_id: @myresponse.respondent_id }
     end
 
     assert_redirected_to response_path(assigns(:response))

@@ -1,0 +1,10 @@
+<%= @question.text %>
+
+<%= form_tag(:url => { :action => :next }) do %>
+  <% @question.answers.each do |answer| %>
+    <%= radio_button_tag(:answer, answer.id) %>
+    <%= label_tag("answer_#{answer.id}", answer.text) %><br />
+  <% end %>
+  <%= submit_tag "Next", :id => 'question_submit' %>
+  <%= hidden_field_tag :question_id, @question.id %>
+<% end %>
