@@ -30,7 +30,6 @@ class InterviewController < ApplicationController
   def done
     session[:current_survey] = nil
     session[:current_respondent] = nil
-    render :text => "Thank you"
   end
 
 private
