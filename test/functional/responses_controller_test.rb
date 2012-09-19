@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ResponsesControllerTest < ActionController::TestCase
   setup do
-    @response = responses(:one)
+    @myresponse = responses(:one)
   end
 
   test "should get index" do
@@ -18,30 +18,30 @@ class ResponsesControllerTest < ActionController::TestCase
 
   test "should create response" do
     assert_difference('Response.count') do
-      post :create, response: { answer_id: @response.answer_id, respondent_id: @response.respondent_id }
+      post :create, response: { answer_id: @myresponse.answer_id, :value => @myresponse.value, respondent_id: @myresponse.respondent_id }
     end
 
     assert_redirected_to response_path(assigns(:response))
   end
 
   test "should show response" do
-    get :show, id: @response
+    get :show, id: @myresponse
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @response
+    get :edit, id: @myresponse
     assert_response :success
   end
 
   test "should update response" do
-    put :update, id: @response, response: { answer_id: @response.answer_id, respondent_id: @response.respondent_id }
+    put :update, id: @myresponse, response: { answer_id: @myresponse.answer_id, respondent_id: @myresponse.respondent_id }
     assert_redirected_to response_path(assigns(:response))
   end
 
   test "should destroy response" do
     assert_difference('Response.count', -1) do
-      delete :destroy, id: @response
+      delete :destroy, id: @myresponse
     end
 
     assert_redirected_to responses_path

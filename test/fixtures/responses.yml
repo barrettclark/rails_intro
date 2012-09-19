@@ -3,7 +3,9 @@
 one:
   answer_id: 1
   respondent_id: 1
+  value: 1
 
 two:
-  answer_id: 1
+  answer_id: 2
   respondent_id: 1
+  value: 2
