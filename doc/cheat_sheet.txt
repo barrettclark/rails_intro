@@ -1,0 +1,9 @@
+rails s[erver]
+rails c[onsole]
+rails db
+
+rake -T
+rake db:migrate
+rake routes
+
+fail @object.inspect

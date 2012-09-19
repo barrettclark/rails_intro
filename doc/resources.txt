@@ -1,0 +1,12 @@
+http://www.ruby-lang.org/en/documentation/
+
+http://www.ruby-doc.org/core-1.9.3/Array.html
+
+http://guides.rubyonrails.org/
+
+https://github.com/rails/rails
+
+http://pragprog.com/book/rails2/agile-web-development-with-rails
+
+http://pragprog.com/book/ruby3/programming-ruby-1-9
+

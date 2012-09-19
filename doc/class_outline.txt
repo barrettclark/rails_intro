@@ -95,9 +95,7 @@ git init; add; commit -m
 rails scaffold survey name
 rake db:migrate
 rails s
-yeah!! party time
-=======  Break  ========
-So what happened
+
 routes
 MVC
 
