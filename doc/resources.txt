@@ -1,5 +1,7 @@
 http://www.ruby-lang.org/en/documentation/
 
+http://www.codecademy.com/tracks/ruby
+
 http://www.ruby-doc.org/core-1.9.3/Array.html
 
 http://guides.rubyonrails.org/
